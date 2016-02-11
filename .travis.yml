@@ -44,9 +44,13 @@ install:
   - gcc --version
   - g++-5 --version
   - gcc main.c -o glibc_version
+  - gcc-5 main.co -o glibc_version_5
   - g++ glibcxx.cpp -o glibcxx_version
+  - g++-5 glibcxx.cpp -o glibcxx_version_5
 
 script:
   - ./glibc_version
   - ./glibcxx_version
+  - ./glibc_version_5
+  - ./glibcxx_version_5
 
