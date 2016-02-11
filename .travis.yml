@@ -55,3 +55,4 @@ script:
  # - ./glibc_version_5
   - ./glibcxx_version_5
   - strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
+  - ls -la /usr/lib/x86_64-linux-gnu/libstdc++.so.6*
