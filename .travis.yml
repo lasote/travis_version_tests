@@ -33,10 +33,6 @@ addons:
       - ubuntu-toolchain-r-test
 
 install:
-  - gcc --version
-  - gcc main.c -o main
-  - ./main
-
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
 
@@ -46,13 +42,13 @@ install:
   - sudo apt-get install ninja-build
 
   - gcc --version
-  - gcc main.c -o main2
-  - ./main2
+  - gcc main.c -o glibc_version
+  - ./glibc_version
 
-  - gcc-5 --version
-  - gcc-5 main.c -o main3
-  - ./main3
+  - g++ glibcxx.cpp -o glibcxx_version
+  - ./glibcxx_version
 
 script:
-  - echo "HELLO WORLD"
+  - ./glibc_version
+  - ./glibcxx_version
 
