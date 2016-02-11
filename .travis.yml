@@ -42,11 +42,9 @@ install:
   - sudo apt-get install ninja-build
 
   - gcc --version
+  - g++-5 --version
   - gcc main.c -o glibc_version
-  - ./glibc_version
-
   - g++ glibcxx.cpp -o glibcxx_version
-  - ./glibcxx_version
 
 script:
   - ./glibc_version
