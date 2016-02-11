@@ -36,6 +36,7 @@ install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
 
+  - strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
   - sudo apt-get install -qq g++-5
   - export CXX="g++-5" CC="gcc-5" GCOV="gcov-5"
 
