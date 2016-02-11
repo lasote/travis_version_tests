@@ -33,22 +33,25 @@ addons:
       - ubuntu-toolchain-r-test
 
 install:
-  -gcc --version
-  -gcc main.c -o main
-  -./main
+  - gcc --version
+  - gcc main.c -o main
+  - ./main
 
-  -sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  -sudo apt-get update -qq
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
 
-  -sudo apt-get install -qq g++-5
-  -export CXX="g++-5" CC="gcc-5" GCOV="gcov-5"
+  - sudo apt-get install -qq g++-5
+  - export CXX="g++-5" CC="gcc-5" GCOV="gcov-5"
 
-  -sudo apt-get install ninja-build
+  - sudo apt-get install ninja-build
 
-  -gcc --version
-  -gcc main.c -o main2
-  -./main2
+  - gcc --version
+  - gcc main.c -o main2
+  - ./main2
 
+  - gcc-5 --version
+  - gcc-5 main.c -o main3
+  - ./main3
 
 script:
   - echo "HELLO WORLD"
