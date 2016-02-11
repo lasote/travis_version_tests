@@ -51,6 +51,6 @@ install:
 script:
   - ./glibc_version
   - ./glibcxx_version
-  - ./glibc_version_5
+ # - ./glibc_version_5
   - ./glibcxx_version_5
 
